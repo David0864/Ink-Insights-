@@ -14,8 +14,9 @@
   
 ## Description
 
-Welcome to our Book Club ! <br>
-This platform is designed to bring book enthusiasts together to discover, discuss & share their favorite reads. <br>
+Welcome to our Book Club, "Ink Insights" ! <br>
+This platform is designed to bring book enthusiasts together to discover, discuss <br>
+& share their favorite reads. <br>
 Users can explore a wide range of books, create reading lists, join book discussions <br>
 & connect with like-minded readers. <br>
 Join us in this literary journey & immerse yourself in the world of books.
@@ -24,7 +25,7 @@ Join us in this literary journey & immerse yourself in the world of books.
 
 Sign Up or Log In :
 
-If you are a new user, click on the "Sign Up" link and fill in the required information to create an account. <br>
+If you are a new user, click on the "Sign Up" link & fill in the required information to create an account. <br>
 If you are a returning user, click on the "Log In" link & enter your credentials to access your account.
 
 Explore Book Club Features :
@@ -96,14 +97,14 @@ User Authentication : implemented authentication features using JWT (JSON Web To
 
 Deployment : deployed the application using a platform like Render to make it accessible to users online.
 
-UI Design : created a polished & responsive user interface that enhances the user experience
+UI Design : created a polished & responsive user interface that enhances the user experience <br>
 & makes the application easy to navigate.
 
-Collaboration : practiced teamwork & collaboration skills by working with a group to develop a complex project, <br>
-including coordinating tasks, sharing code & resolving conflicts.
+Collaboration : practiced teamwork & collaboration skills by working with a group to develop <br>
+a complex project, including coordinating tasks, sharing code & resolving conflicts.
 
-Problem-Solving : developed problem-solving skills by addressing real-world challenges faced during the development <br>
-of the application & finding effective solutions.
+Problem-Solving : developed problem-solving skills by addressing real-world challenges <br>
+faced during the development of the application & finding effective solutions.
 
 Project Management : learned how to plan, organize & execute a project from start to finish, <br>
 including defining requirements, setting milestones & managing timelines effectively.
