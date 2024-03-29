@@ -122,8 +122,8 @@ thank you to UCF Coding Boot Camp Instructor : Steve Mustanski <br>
 Developers
 
 Blair Dowling : <br>
-David Moore :   <br>
-Marina Alonzo : <br>
+David Moore : https://github.com/David0864 <br>
+Marina Alonzo : https://github.com/MarinaA01 <br>
 Lisa Brongo : https://github.com/Ev3ryTh1ngN1c3
 
 
