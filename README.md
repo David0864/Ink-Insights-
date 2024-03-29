@@ -5,7 +5,7 @@
 # Table of Contents
 
   * [Description](#description)
-  * [User Guide](#user guide)
+  * [User Guide](#user-guide)
   * [Live URL](#live-url)
   * [Project Motivation](#project-motivation)
   * [What Was Learned](#what-was-learned)
