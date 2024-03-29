@@ -109,7 +109,6 @@ including defining requirements, setting milestones & managing timelines effecti
 Overall, this project provided a comprehensive learning experience that covers various aspects of <br>
 full-stack application development, user experience design, collaboration & project management.
 
-
 ## Acknowledgments
 
 thank you to UCF Coding Boot Camp Instructor : Steve Mustanski <br>
@@ -119,8 +118,8 @@ thank you to UCF Coding Boot Camp Instructor : Steve Mustanski <br>
 
 Developers
 
-Blair Dowling : 
-David Moore :
-Marina Alonzo :
-Lisa Brongo :
+Blair Dowling : <br>
+David Moore :   <br>
+Marina Alonzo : <br>
+Lisa Brongo :   <br>
 
