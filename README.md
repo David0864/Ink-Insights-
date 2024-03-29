@@ -16,7 +16,8 @@
 
 Welcome to our Book Club ! <br>
 This platform is designed to bring book enthusiasts together to discover, discuss & share their favorite reads. <br>
-Users can explore a wide range of books, create reading lists, join book discussions & connect with like-minded readers. <br>
+Users can explore a wide range of books, create reading lists, join book discussions <br>
+& connect with like-minded readers. <br>
 Join us in this literary journey & immerse yourself in the world of books.
 
 ## User Guide
@@ -58,18 +59,19 @@ Enhanced User Experience : provides a user-friendly & interactive platform, this
 experience for book club members, making it easier for them to discover new books, participate in discussions <br>
 & connect with others who share their interests.
 
-Convenience & Accessibility : the online nature of the application allows book club members to participate in discussions, <br>
-access book recommendations & join events from anywhere at any time, providing convenience & accessibility to users.
+Convenience & Accessibility : the online nature of the application allows book club members <br>
+to participate in discussions, access book recommendations & join events from anywhere at any time, <br>
+providing convenience & accessibility to users.
 
 
-Promotion of Reading Culture : the project's motivation also promotes a culture of reading & learning by providing <br>
-a space where users can explore new books, engage in literary discussions & expand their knowledge in a collaborative <br>
-& interactive environment.
+Promotion of Reading Culture : the project's motivation also promotes a culture of reading <br>
+& learning by providing a space where users can explore new books, engage in literary discussions <br>
+& expand their knowledge in a collaborative & interactive environment.
 
 
-Skill Development : developing this MERN Stack Single-Page Application for a book club provided an opportunity for us <br>
-to enhance our skills in full-stack development, database management, user authentication & create an interactive user <br>
-interface.
+Skill Development : developing this MERN Stack Single-Page Application for a book club <br>
+provided an opportunity for us to enhance our skills in full-stack development, <br>
+database management, user authentication & create an interactive user interface.
 
 Overall, the motivation behind creating this application for a book club is to foster a sense of community, <br>
 provide a platform for book lovers to connect & engage, offer a seamless & enjoyable experience for users <br>
@@ -121,5 +123,5 @@ Developers
 Blair Dowling : <br>
 David Moore :   <br>
 Marina Alonzo : <br>
-Lisa Brongo :   <br>
+Lisa Brongo : https://github.com/Ev3ryTh1ngN1c3
 
