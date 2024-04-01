@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
     {
       "username": "Marina Alonzo",
       "email": "marina@gmail.com",
@@ -11,3 +12,27 @@
     }
   ]
   
+=======
+  {
+    "username": "BlairD",
+    "email": "BlairD@inkandinsights.dev",
+    "password": "BlairD"
+  },
+  {
+    "username": "LisaB",
+    "email": "LisaB@inkandinsights.dev",
+    "password": "LisaB"
+  },
+  {
+    "username": "MarinaA",
+    "email": "MarinaA@inkandinsights.dev",
+    "password": "MarinaA"
+  },
+  {
+    "username": "DavidM",
+    "email": "DavidM@inkandinsights.dev",
+    "password": "DavidM"
+  }
+ 
+]
+>>>>>>> afc481c4eb9cea505c76454dab471705064d9f00
