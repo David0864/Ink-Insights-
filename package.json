@@ -1,5 +1,5 @@
 {
-  "name": "programming-thoughts",
+  "name": "ink-insights-",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -10,10 +10,9 @@
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^8.2.0"
+    "concurrently": "^8.2.2"
   }
 }
