@@ -1,18 +1,4 @@
 [
-<<<<<<< HEAD
-    {
-      "username": "Marina Alonzo",
-      "email": "marina@gmail.com",
-      "password": "password01"
-    },
-    {
-      "username": "",
-      "email": "",
-      "password": ""
-    }
-  ]
-  
-=======
   {
     "username": "BlairD",
     "email": "BlairD@inkandinsights.dev",
@@ -35,4 +21,3 @@
   }
  
 ]
->>>>>>> afc481c4eb9cea505c76454dab471705064d9f00

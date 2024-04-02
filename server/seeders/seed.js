@@ -10,6 +10,8 @@ db.once('open', async () => {
 
     await cleanDB('User', 'users');
 
+    await cleanDB('Book', 'books');
+
     await User.create(userSeeds);
 
     for (let i = 0; i < thoughtSeeds.length; i++) {
