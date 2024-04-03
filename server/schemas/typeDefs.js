@@ -15,16 +15,6 @@ const typeDefs = `
     comments: [Comment]!
   }
 
-  type Book {
-    _id: ID
-    bookId: String
-    authors: [String]
-    description: String
-    title: String
-    image: String
-    rating: String
-  }
-
   type Comment {
     _id: ID
     commentText: String

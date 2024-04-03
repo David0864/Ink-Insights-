@@ -1,10 +1,10 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-const bookSchema = new Schema({
+const commentSchema = new Schema({
   bookTitle: {
     type: String,
-    required: 'You need to add a book!',
+    required: 'You need to add a comment!',
     minlength: 1,
     maxlength: 280,
     trim: true,
@@ -36,6 +36,6 @@ const bookSchema = new Schema({
   ],
 });
 
-const Book = model('Book', bookSchema);
+const Comment = model('Comment', commentSchema);
 
-module.exports = Book;
+module.exports = Comment;
