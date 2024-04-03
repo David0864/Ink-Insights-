@@ -63,6 +63,20 @@ const resolvers = {
         }
       );
     },
+    editComment: async (parent, { thoughtId, commentId, commentText }) => {
+      return Thought.findOneAndUpdate(
+        { _id: thoughtId, 'comments._id': commentId },
+        { $set: { 'comments.$.commentText': commentText } },
+        { new: true }
+      );
+    },
+    editThought: async (parent, { thoughtId, thoughtText }) => {
+      return Thought.findOneAndUpdate(
+        { _id: thoughtId },
+        { $set: { thoughtText: thoughtText } },
+        { new: true }
+      );
+    },
     removeThought: async (parent, { thoughtId }) => {
       return Thought.findOneAndDelete({ _id: thoughtId });
     },
