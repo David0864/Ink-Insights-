@@ -114,20 +114,16 @@ full-stack application development, user experience design, collaboration & proj
 
 ## Acknowledgments
 
-thank you to UCF Coding Boot Camp Instructor : Steve Mustanski 
-
+thank you to UCF Coding Boot Camp Instructor : Steve Mustanski <br>
 & Teacher Assistants : Mateo Wallace & Gerard Mennella
 
 ## Connect
 
 Developers
 
-Blair Dowling : https://github.com/Blair-D 
-
-David Moore : https://github.com/David0864 
-
-Marina Alonzo : https://github.com/MarinaA01 
-
+Blair Dowling : https://github.com/Blair-D <br>
+David Moore : https://github.com/David0864 <br>
+Marina Alonzo : https://github.com/MarinaA01 <br>
 Lisa Brongo : https://github.com/Ev3ryTh1ngN1c3
 
 
