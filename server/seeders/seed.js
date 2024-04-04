@@ -26,6 +26,20 @@ db.once('open', async () => {
         }
       );
     }
+
+    for (let i = 0; i < commentSeeds.length; i++) {
+      const { _id, commentAuthor } = await Comment.create(commentSeeds[i]);
+      const user = await User.findOneAndUpdate(
+        { username: commentAuthor },
+        {
+          $addToSet: {
+            comments: _id,
+          },
+        }
+      );
+    }
+
+
   } catch (err) {
     console.error(err);
     process.exit(1);
