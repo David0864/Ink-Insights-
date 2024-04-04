@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 import Auth from '../../utils/auth';
 
 const Header = () => {
@@ -7,29 +6,35 @@ const Header = () => {
     event.preventDefault();
     Auth.logout();
   };
+
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
+    <header className="bg-slate-900 text-white mb-4 py-3">
+      <div className="container mx-auto flex justify-between items-center">
         <div>
-          <Link className="text-light" to="/">
-            <h1 className="m-0">Ink & Insights</h1>
+          <Link className="text-lg text-sky-600" to="/">
+            <h1 className="text-4xl font-bold">Ink & Insights</h1>
           </Link>
-          <p className="m-0">Where a love for ink meets a passion for insight.</p>
+          <p className="text-2xl">Where a love for ink meets a passion for insight.</p>
         </div>
-        <div>
+        <div className="flex items-center">
+          <p className="text-xl mr-4 pt-4">
+            {Auth.loggedIn() && `Hey there, ${Auth.getProfile().data.username}!`}
+          </p>
           {Auth.loggedIn() ? (
             <>
-              <span>Hey there, {Auth.getProfile().data.username}!</span>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              <Link className="bg-sky-600 text-white px-6 py-3 rounded-lg no-underline hover:no-underline text-xl" to="/account">
+                Account
+              </Link>
+              <button className="bg-sky-600 px-6 py-3 rounded-lg text-xl ml-4" onClick={logout}>
                 Logout
               </button>
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
+              <Link className="bg-sky-600 text-white px-6 py-3 rounded-lg no-underline hover:no-underline text-xl" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link className="bg-sky-600 text-white px-6 py-3 rounded-lg no-underline hover:no-underline text-xl ml-4" to="/signup">
                 Signup
               </Link>
             </>

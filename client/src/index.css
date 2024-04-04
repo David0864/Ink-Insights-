@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: linear-gradient(to bottom, rgb(150, 120, 190), #000000);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}

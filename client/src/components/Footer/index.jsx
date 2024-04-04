@@ -1,20 +1,20 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
   const location = useLocation();
-  const navigate = useNavigate();
+
   return (
-    <footer className="w-100 mt-auto bg-secondary p-4">
-      <div className="container text-center mb-5">
+    <footer className="w-full mt-auto bg-secondary p-4">
+      <div className="container mx-auto text-center mb-5">
         {location.pathname !== '/' && (
           <button
-            className="btn btn-dark mb-3"
-            onClick={() => navigate(-1)}
+            className="bg-gray-800 text-white px-4 py-2 rounded-md mb-3 hover:bg-gray-700"
+            onClick={() => window.history.back()}
           >
             &larr; Return to blog post list
           </button>
         )}
-        <h4>
+        <h4 className="text-white">
           Made with{' '}
           <span
             className="emoji"

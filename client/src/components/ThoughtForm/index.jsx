@@ -9,15 +9,9 @@ import Auth from '../../utils/auth';
 
 const ThoughtForm = () => {
   const [thoughtText, setThoughtText] = useState('');
-
   const [characterCount, setCharacterCount] = useState(0);
-
-  const [addThought, { error }] = useMutation
-  (ADD_THOUGHT, {
-    refetchQueries: [
-      QUERY_THOUGHTS,
-      'getThoughts'
-    ]
+  const [addThought, { error }] = useMutation(ADD_THOUGHT, {
+    refetchQueries: [QUERY_THOUGHTS],
   });
 
   const handleFormSubmit = async (event) => {
@@ -47,49 +41,45 @@ const ThoughtForm = () => {
   };
 
   return (
-    <div>
-      <h3>Create new Bookclub</h3>
+    <div className="mt-8 max-w-lg mx-auto ">
+      <h3 className="text-3xl font-bold mb-4">Create New Thought</h3>
 
       {Auth.loggedIn() ? (
         <>
-          <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
-            }`}
-          >
+          <p className={`text-sm mb-2 ${characterCount === 280 || error ? 'text-red-500' : ''}`}>
             Character Count: {characterCount}/280
           </p>
-          <form
-            className="flex-row justify-center justify-space-between-md align-center"
-            onSubmit={handleFormSubmit}
-          >
-            <div className="col-12 col-lg-9">
-              <textarea
-                name="thoughtText"
-                placeholder="Here's a new thought..."
-                value={thoughtText}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
-                onChange={handleChange}
-              ></textarea>
-            </div>
-
-            <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Thought
-              </button>
-            </div>
+          <form onSubmit={handleFormSubmit} className="flex flex-col space-y-4">
+            <textarea
+              name="thoughtText"
+              placeholder="Here's a new thought..."
+              value={thoughtText}
+              onChange={handleChange}
+              className="w-full p-2 border rounded-md resize-none"
+              style={{ minHeight: '150px' }}
+            ></textarea>
+            <button
+              className="bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition-colors duration-300"
+              type="submit"
+            >
+              Add Thought
+            </button>
             {error && (
-              <div className="col-12 my-3 bg-danger text-white p-3">
-                {error.message}
-              </div>
+              <div className="bg-red-500 text-white p-2 rounded-md">{error.message}</div>
             )}
           </form>
         </>
       ) : (
-        <p>
+        <p className="text-lg">
           You need to be logged in to share your thoughts. Please{' '}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          <Link to="/login" className="text-blue-500 hover:underline">
+            login
+          </Link>{' '}
+          or{' '}
+          <Link to="/signup" className="text-blue-500 hover:underline">
+            signup
+          </Link>
+          .
         </p>
       )}
     </div>
