@@ -2,30 +2,34 @@ const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const commentSchema = new Schema({
-  bookTitle: {
+  commentText: {
     type: String,
-    required: 'You need to add a comment!',
+    required: 'You need to leave a comment!',
     minlength: 1,
     maxlength: 280,
     trim: true,
   },
-  bookAuthor: {
+  commentAuthor: {
     type: String,
     required: true,
     trim: true,
   },
-  addedAt: {
+  createdAt: {
     type: Date,
     default: Date.now,
     get: (timestamp) => dateFormat(timestamp),
   },
-  ratings: [
+  comments: [
     {
-      ratingText: {
+      commentText: {
         type: String,
         required: true,
         minlength: 1,
         maxlength: 280,
+      },
+      commentAuthor: {
+        type: String,
+        required: true,
       },
       createdAt: {
         type: Date,
