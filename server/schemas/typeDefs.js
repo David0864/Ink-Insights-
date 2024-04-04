@@ -32,6 +32,8 @@ const typeDefs = `
     user(username: String!): User
     thoughts(username: String): [Thought]
     thought(thoughtId: ID!): Thought
+    comments(username: String): [Comment]
+    comment(commentId: ID!): Comment
   }
 
   type Mutation {
@@ -43,6 +45,8 @@ const typeDefs = `
       commentText: String!
       commentAuthor: String!
     ): Thought
+    editThought(thoughtId: ID!, thoughtText: String!): Thought
+    editComment(thoughtId: ID!, commentId: ID!, commentText: String!): Thought
     removeThought(thoughtId: ID!): Thought
     removeComment(thoughtId: ID!, commentId: ID!): Thought
   }

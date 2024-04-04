@@ -115,7 +115,7 @@ full-stack application development, user experience design, collaboration & proj
 ## Acknowledgments
 
 thank you to UCF Coding Boot Camp Instructor : Steve Mustanski <br>
-& Teacher Assistants : Mateo Wallace & Gerard Mennella <br>
+& Teacher Assistants : Mateo Wallace & Gerard Mennella
 
 ## Connect
 

@@ -1,4 +1,4 @@
-const { User, Thought } = require('../models');
+const { User, Thought, Comment } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -16,6 +16,13 @@ const resolvers = {
     thought: async (parent, { thoughtId }) => {
       return Thought.findOne({ _id: thoughtId });
     },
+    comments: async (parent, { username }) => {
+      const params = username ? { username } : {};
+      return Comment.find(params).sort({ createdAt: -1 });
+    },
+    comment: async (parent, { commentId }) => {
+      return Comment.findOne({ _id: commentId });
+  },
   },
 
   Mutation: {
@@ -61,6 +68,20 @@ const resolvers = {
           new: true,
           runValidators: true,
         }
+      );
+    },
+    editComment: async (parent, { thoughtId, commentId, commentText }) => {
+      return Thought.findOneAndUpdate(
+        { _id: thoughtId, 'comments._id': commentId },
+        { $set: { 'comments.$.commentText': commentText } },
+        { new: true }
+      );
+    },
+    editThought: async (parent, { thoughtId, thoughtText }) => {
+      return Thought.findOneAndUpdate(
+        { _id: thoughtId },
+        { $set: { thoughtText: thoughtText } },
+        { new: true }
       );
     },
     removeThought: async (parent, { thoughtId }) => {
