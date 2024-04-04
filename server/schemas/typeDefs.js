@@ -32,6 +32,8 @@ const typeDefs = `
     user(username: String!): User
     thoughts(username: String): [Thought]
     thought(thoughtId: ID!): Thought
+    comments(username: String): [Comment]
+    comment(commentId: ID!): Comment
   }
 
   type Mutation {
