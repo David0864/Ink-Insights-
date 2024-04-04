@@ -1,19 +1,14 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
-
-import Auth from '../utils/auth';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../utils/mutations";
+import Auth from "../utils/auth";
 
 const Signup = () => {
-  const [formState, setFormState] = useState({
-    username: '',
-    email: '',
-    password: '',
-  });
+  const [formState, setFormState] = useState({ username: "", email: "", password: "" });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
+  // update state based on form input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -23,9 +18,9 @@ const Signup = () => {
     });
   };
 
+  // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
 
     try {
       const { data } = await addUser({
@@ -36,64 +31,86 @@ const Signup = () => {
     } catch (e) {
       console.error(e);
     }
+
+    // clear form values
+    setFormState({
+      username: "",
+      email: "",
+      password: "",
+    });
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
+    <div className="pt-10">
+      <main className="flex justify-center items-center pt-10 pb-8 mb-4 bg-gray-900 max-w-2xl mx-auto lg:text-xl xl:text-2xl">
+        <div className="w-full max-w-xl">
+          <div className="bg-gray-800 shadow-md rounded-lg px-8 pt-10 pb-8 mb-4">
+            <h4 className="text-3xl font-bold mb-4 text-sky-600">Sign Up</h4>
             {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+              <p className="text-green-500 mb-4">
+                Success! You may now <Link to="/" className="text-blue-500">continue to the application.</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your username"
-                  name="username"
-                  type="text"
-                  value={formState.name}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
+                <div className="mb-6">
+                  <label className="block text-gray-300 text-md font-bold mb-2" htmlFor="username">
+                    Username
+                  </label>
+                  <input
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                    id="username"
+                    type="text"
+                    placeholder="Your username"
+                    name="username"
+                    value={formState.username}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="mb-6">
+                  <label className="block text-gray-300 text-md font-bold mb-2" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                    id="email"
+                    type="email"
+                    placeholder="Your email"
+                    name="email"
+                    value={formState.email}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="mb-6">
+                  <label className="block text-gray-300 text-md font-bold mb-2" htmlFor="password">
+                    Password
+                  </label>
+                  <input
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                    id="password"
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    value={formState.password}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="flex items-center justify-between">
+                  <button
+                    className="bg-sky-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit"
+                  >
+                    Sign Up
+                  </button>
+                </div>
               </form>
             )}
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
           </div>
+          {error && (
+            <div className="text-red-500 text-center">{error.message}</div>
+          )}
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 };
 
