@@ -41,3 +41,13 @@ export const QUERY_SINGLE_THOUGHT = gql`
     }
   }
 `;
+
+// export const QUERY_USER_THOUGHTS = gql`
+//   query getUserThoughts(userID: ID!) {
+//   thoughts(userId: $userId) {
+//     thoughtText
+//       thoughtAuthor
+//       createdAt
+//   }
+//   }
+//   `
