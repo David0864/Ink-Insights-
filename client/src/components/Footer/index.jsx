@@ -11,7 +11,7 @@ const Footer = () => {
             className="bg-gray-800 text-white px-4 py-2 rounded-md mb-3 hover:bg-gray-700"
             onClick={() => window.history.back()}
           >
-            &larr; Return to blog post list
+            &larr; Return To Blog Post List
           </button>
         )}
         <h4 className="text-white">
