@@ -50,6 +50,8 @@ When you're done using the application, remember to log out to secure your accou
 
 ## Live URL 
 
+https://ink-and-insights.onrender.com/
+
 ## Project Motivation
 
 Community Building : this application aims to create a platform where book enthusiasts can come together, <br>
