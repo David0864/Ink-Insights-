@@ -1,4 +1,4 @@
-# Ink Insights (Book Club)
+# Ink & Insights (Book Club)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
