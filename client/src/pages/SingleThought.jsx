@@ -25,7 +25,7 @@ const SingleThought = () => {
       <h3 className="card-header bg-dark text-light p-2 m-0">
         {thought.thoughtAuthor} <br />
         <span className="text-sm">
-          Book name Blog Post {thought.createdAt}
+          Created this Book Club on{thought.createdAt}
         </span>
       </h3>
       <div className="bg-light py-4">

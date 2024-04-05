@@ -50,7 +50,7 @@ const ThoughtList = ({ thoughts, title }) => {
             <h4 className="text-xl font-bold text-white">
               {thought.thoughtAuthor} <br />
               <span className="text-sm text-gray-400">
-                had this thought on {thought.createdAt}
+                Created this Book Club Blog Post {thought.createdAt}
               </span>
             </h4>
             <div className="text-white mt-4">
@@ -62,7 +62,7 @@ const ThoughtList = ({ thoughts, title }) => {
               className="bg-sky-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mb-2 lg:mb-0 lg:mr-2 focus:outline-none focus:shadow-outline no-underline hover:no-underline"
               to={`/thoughts/${thought._id}`}
             >
-              Join the discussion on this thought.
+              Join the discussion on this book.
             </Link>
             <button
               className="bg-sky-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mb-2 lg:mb-0 lg:mr-2 focus:outline-none focus:shadow-outline"

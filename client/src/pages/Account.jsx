@@ -16,7 +16,7 @@ const AccountPage = () => {
     const thoughts = data?.thoughts || [];
   return (
       <div className="col-12 col-md-8 mb-3">
-        <h1>My Thoughts</h1>
+        <h1>My Insights</h1>
           {loading ? (
             <div>Loading... Please Wait</div>
           ) : (
