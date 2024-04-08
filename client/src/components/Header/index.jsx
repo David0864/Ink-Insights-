@@ -8,16 +8,16 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-slate-900 text-white mb-4 py-3">
-      <div className="container mx-auto flex justify-between items-center">
-        <div>
+    <header className="bg-gray-900 text-white mb-4 py-3">
+      <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
+        <div className="mb-4 lg:mb-0">
           <Link className="text-lg text-sky-600" to="/">
             <h1 className="text-4xl font-bold">Ink & Insights</h1>
           </Link>
           <p className="text-2xl">Where a love for ink meets a passion for insight.</p>
         </div>
         <div className="flex items-center">
-          <p className="text-xl mr-4 pt-4">
+          <p className="text-xl mr-4 lg:mr-0 lg:pt-4 mb-2 lg:mb-0">
             {Auth.loggedIn() && `Hey there, ${Auth.getProfile().data.username}!`}
           </p>
           {Auth.loggedIn() ? (

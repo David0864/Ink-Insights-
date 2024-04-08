@@ -1,11 +1,10 @@
 import { useParams } from 'react-router-dom';
-import { useMutation, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 
 import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
 
 import { QUERY_SINGLE_THOUGHT } from '../utils/queries';
-import { REMOVE_COMMENT } from '../utils/mutations';
 
 const SingleThought = () => {
   const { thoughtId } = useParams();
@@ -22,24 +21,20 @@ const SingleThought = () => {
 
   return (
     <div className="my-3">
-      <h3 className="card-header bg-dark text-light p-2 m-0">
+      <h3 className="text-2xl font-bold bg-gray-800 text-white shadow-md rounded-lg p-4 m-0">
         {thought.thoughtAuthor} <br />
-        <span className="text-sm">
-          Created this Book Club on{thought.createdAt}
+        <span className="text-sm text-gray-400">
+          Created this Book Club on {thought.createdAt}
         </span>
-      </h3>
-      <div className="bg-light py-4">
-        <blockquote
-          className="p-4 text-lg italic border border-dotted border-black"
-        >
+        <blockquote className="p-4 text-lg">
           {thought.thoughtText}
         </blockquote>
-      </div>
+      </h3>
 
       <div className="my-5">
         <CommentList comments={thought.comments} thoughtId={thought._id} />
       </div>
-      <div className="m-3 p-4 border border-dotted border-black">
+      <div className="m-3 p-4">
         <CommentForm thoughtId={thought._id} />
       </div>
     </div>
