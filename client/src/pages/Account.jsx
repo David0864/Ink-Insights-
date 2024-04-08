@@ -4,27 +4,28 @@ import ThoughtList from '../components/ThoughtList';
 import { QUERY_THOUGHTS } from '../utils/queries';
 import Auth from '../utils/auth';
 
-
 const AccountPage = () => {
-    const { username } = Auth.getProfile().data;
+  const { username } = Auth.getProfile().data;
 
-    const { loading, error, data } = useQuery(QUERY_THOUGHTS, {
-        variables: { username }
-    });
+  const { loading, error, data } = useQuery(QUERY_THOUGHTS, {
+    variables: { username }
+  });
 
+  const thoughts = data?.thoughts || [];
 
-    const thoughts = data?.thoughts || [];
   return (
+    <div className="flex justify-center items-center h-full">
       <div className="col-12 col-md-8 mb-3">
-        <h1>My Insights</h1>
-          {loading ? (
-            <div>Loading... Please Wait</div>
-          ) : (
-            <ThoughtList
-              thoughts={thoughts}
-            />
-          )}
-        </div>
+        <h1 className="text-center">My Insights</h1>
+        {loading ? (
+          <div>Loading... Please Wait</div>
+        ) : (
+          <ThoughtList
+            thoughts={thoughts}
+          />
+        )}
+      </div>
+    </div>
   );
 };
 

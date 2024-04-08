@@ -43,7 +43,7 @@ const ThoughtList = ({ thoughts, title }) => {
 
   return (
     <div>
-      <h3 className="text-3xl font-bold mb-4 text-sky-600">{title}</h3>
+      <h3 className="text-3xl font-bold mb-4 text-sky-400 text-center">{title}</h3>
       {thoughts.map((thought) => (
         <div key={thought._id} className="bg-gray-800 shadow-md rounded-lg mb-4">
           <div className="p-4">
