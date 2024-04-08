@@ -1,7 +1,9 @@
-# Ink Insights (Book Club)
+# Ink & Insights (Book Club)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  
+
+![Ink   Insights 2](https://github.com/David0864/Ink-Insights-/assets/143395934/ce6e8c17-18f5-416a-b726-2406fcf235cc)
+
 # Table of Contents
 
   * [Description](#description)
@@ -49,6 +51,8 @@ Logout :
 When you're done using the application, remember to log out to secure your account.
 
 ## Live URL 
+
+https://ink-and-insights.onrender.com/
 
 ## Project Motivation
 
