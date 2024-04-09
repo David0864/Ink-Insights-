@@ -23,6 +23,12 @@ const resolvers = {
     comment: async (parent, { commentId }) => {
       return Comment.findOne({ _id: commentId });
   },
+  me: async (parent, args, context) => {
+    if (context.user) {
+      return User.findOne({ _id: context.user._id }).populate('thoughts');
+    }
+    throw AuthenticationError;
+  },
   },
 
   Mutation: {

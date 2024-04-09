@@ -1,17 +1,16 @@
 import { useQuery } from '@apollo/client';
+import { useParams } from 'react-router-dom';
 import React from 'react';
 import ThoughtList from '../components/ThoughtList';
-import { QUERY_THOUGHTS } from '../utils/queries';
+import { QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
 const AccountPage = () => {
-  const { username } = Auth.getProfile().data;
 
-  const { loading, error, data } = useQuery(QUERY_THOUGHTS, {
-    variables: { username }
-  });
+  const { loading, error, data } = useQuery(QUERY_ME);
 
-  const thoughts = data?.thoughts || [];
+  const user = data?.me;
+
 
   return (
     <div className="flex justify-center items-center h-full">
@@ -21,7 +20,7 @@ const AccountPage = () => {
           <div>Loading... Please Wait</div>
         ) : (
           <ThoughtList
-            thoughts={thoughts}
+            thoughts={user.thoughts}
           />
         )}
       </div>

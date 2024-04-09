@@ -34,6 +34,7 @@ const typeDefs = `
     thought(thoughtId: ID!): Thought
     comments(username: String): [Comment]
     comment(commentId: ID!): Comment
+    me: User
   }
 
   type Mutation {
