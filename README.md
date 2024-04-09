@@ -2,7 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Ink   Insights 2](https://github.com/David0864/Ink-Insights-/assets/143395934/ce6e8c17-18f5-416a-b726-2406fcf235cc)
+![Ink   Insights 2](./client/src/assets/Screenshot%20(14).png)
+
 
 # Table of Contents
 
