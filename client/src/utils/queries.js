@@ -26,6 +26,33 @@ export const QUERY_THOUGHTS = gql`
   }
 `;
 
+export const QUERY_USER_THOUGHTS = gql`
+  query getUserThoughts($thoughtAuthor: String!) {
+    thoughts(thoughtAuthor: $thoughtAuthor) {
+      _id
+      thoughtText
+      thoughtAuthor
+      createdAt
+    }
+  }
+`;
+
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      username
+      email
+      thoughts {
+        _id
+        thoughtText
+        thoughtAuthor
+        createdAt
+      }
+    }
+  }
+`;
+
 export const QUERY_SINGLE_THOUGHT = gql`
   query getSingleThought($thoughtId: ID!) {
     thought(thoughtId: $thoughtId) {
